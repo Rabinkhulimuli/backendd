@@ -9,11 +9,12 @@ const app = express()
 dotenv.config()
 
 /* CORS */
-app.options("*",cors())
+
 app.use(cors({
     origin: ["http://localhost:5173","https://global-server-ten.vercel.app"],
     credentials: true
 }))
+app.options("*",cors())
 app.use(express.json())
 const storage=multer.memoryStorage()
 const upload= multer({storage}).single('file')
