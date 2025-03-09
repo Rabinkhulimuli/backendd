@@ -5,9 +5,9 @@ import nodemailer from 'nodemailer'
 import fs from 'fs'
 import path from 'path'
 import multer from 'multer'
-const app = express()
-dotenv.config()
 
+dotenv.config()
+const app = express()
 /* CORS */
 
 app.use(cors({
